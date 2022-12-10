@@ -1,0 +1,9 @@
+.questions {
+  background-color: rgb(169, 250, 226);
+  padding: 10px;
+  border-radius: 15%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
