@@ -94,7 +94,7 @@ const Graph = ({patient}) => {
                 ],
             datasets: [
                 {
-                    label: "level of patients",
+                    label: "No of appointments",
                     data: patientData,
                     borderColor: [
                         "#17a2b8"

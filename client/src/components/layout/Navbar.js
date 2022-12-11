@@ -54,7 +54,7 @@ const Navbar = ({
             <a
               className="nav-link font-weight-bolder"
               onClick={logout_user}
-              href=""
+              
             >
               <i className="fas fa-sign-out-alt" /> <span>Logout</span>
             </a>
@@ -94,8 +94,22 @@ const Navbar = ({
               Create Meeting
             </Link>
           </li>
+          <li className="nav-item active">
+            <Link to="/edit-Profile" className="nav-link ">
+              Edit Profile
+            </Link>
+          </li>
+          <li className="nav-item active">
+            <Link to="/add-Education" className="nav-link ">
+              Add Education            </Link>
+          </li>
+          <li className="nav-item active">
+            <Link to="/add-Experience" className="nav-link ">
+            Add Experience
+            </Link>
+          </li>
 
-          <li className="nav-item dropdown active">
+          {/* <li className="nav-item dropdown active">
             <Link
               className="nav-link dropdown-toggle"
               id="navbarDropdownMenuLink"
@@ -120,16 +134,16 @@ const Navbar = ({
                 <i className="fab fa-black-tie"></i> Add Experience
               </Link>
             </div>
-          </li>
+          </li>*/}
           <li className="nav-item active">
             <a
               className="nav-link font-weight-bolder"
               onClick={logout_doctor}
-              href=""
+              
             >
               <i className="fas fa-sign-out-alt" /> <span>Logout</span>
             </a>
-          </li>
+          </li> 
         </ul>
       </div>
     </Fragment>

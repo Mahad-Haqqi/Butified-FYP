@@ -19,18 +19,26 @@ const Review = ({review, patient}) => {
     ));
     return (
         <Fragment>
-            <div className="review-graph">
-                
-                <div className="common-details">
-                    
-                    <br />
-                    <div id="graph">
-                        {/* <Graph patient={patient} /> */}
+        <div className="review-graph">
+            <div className="common-details">
+            <h2 class="credentials"><strong>Users Reviews</strong></h2>
+                <br />
+                <div id="testimonials">
+                    <div class="scroll">
+                        { review.length === 0 ? "No Reviews Yet" : reviews }
                     </div>
                 </div>
             </div>
-            <br />
-        </Fragment>
+            <div className="common-details">
+                <h2 className="credentials"><strong>Total Appointments</strong></h2>
+                <br />
+                <div id="graph">
+                    <Graph patient={patient} />
+                </div>
+            </div>
+        </div>
+        <br />
+    </Fragment>
     );
 };
 
