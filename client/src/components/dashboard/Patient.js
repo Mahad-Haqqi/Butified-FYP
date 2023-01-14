@@ -1,12 +1,26 @@
-import React, { Fragment,useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import PropTypes from 'prop-types';
 import Moment from 'react-moment';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
+import Box from '@mui/material/Box';
 
-const Patient = ({patient}) => {
+import Modal from '@mui/material/Modal';
 
-    const [value,setValue] = useState([]);
+const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+};
+const Patient = ({ patient }) => {
 
+    const [value, setValue] = useState([]);
+    const [open, setOpen] = React.useState(false);
     const modalBody = patient.map(pat => (
         <Fragment key={pat._id}>
             <h2 className="style-heading"><strong>{pat.patientname}</strong></h2>
@@ -26,45 +40,42 @@ const Patient = ({patient}) => {
                 <Moment format='DD/MM/YYYY'>{ptn.date}</Moment>
             </td>
             <td>
-            <button 
-                onClick={() => setValue(ptn._id)}
-                type="button" 
-                className="btn btn-info"
-                data-toggle="modal" data-target="#exampleModal">
-                View
-            </button>
-                <div className="modal fade " id="exampleModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                        <div className="modal-content">
-                            <div className="modal-header">
-                                <h5 className="modal-title" id="exampleModalLabel">Patient Details</h5>
-                                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div className="modal-body">
-                                <div className="profiles">
-                                    <div className="profile-1">
-                                        <div className="profile-details">
-                                            <div className="appointment-p prfile-desc">
-                                                {
-                                                    modalBody.map(modal => value === modal.key ? 
-                                                        modal.props.children : "")
-                                                }
-                                            </div>
-                                        </div>
-                                        <div className="desc-p profile-buttons">
-                                            <p className="profile-p2"><strong>Description: </strong>{ptn.description}</p>                                        
-                                        </div>
-                                    </div>
+                <button
+                    onClick={() => {
+                        setOpen(true);
+                        setValue(ptn._id);
+                    }}
+                    type="button"
+                    className="btn btn-info"
+                    data-toggle="modal" data-target="#exampleModal">
+                    View
+                </button>
+                <Modal
+                    open={open}
+                    onClose={() => {
+                        setOpen(false);
+                        setValue([]);
+                    }}
+                    aria-labelledby="modal-modal-title"
+                    aria-describedby="modal-modal-description"
+                >
+
+                    <div className="profiles">
+                        <div className="profile-1">
+                            <div className="profile-details">
+                                <div className="appointment-p prfile-desc">
+                                    {
+                                        modalBody.map(modal => value === modal.key ?
+                                            modal.props.children : "")
+                                    }
                                 </div>
                             </div>
-                            <div className="modal-footer">
-                                <button type="button" className="btn btn-info" data-dismiss="modal">Close</button>
+                            <div className="desc-p profile-buttons">
+                                <p className="profile-p2"><strong>Description: </strong>{ptn.description}</p>
                             </div>
                         </div>
                     </div>
-                </div>
+                </Modal>
             </td>
         </tr>
     ));
@@ -73,24 +84,24 @@ const Patient = ({patient}) => {
         <Fragment>
             <div className="common-details">
                 <h2 className="credentials"><strong>User Credentials</strong></h2>
-                    <br />
-                    <div className="common-table">
-                        <div className="scroll-table">
-                            <table className="table">
-                                <thead>
-                                    <tr>
-                                        <th>Booking ID</th>
-                                        <th>Name</th>
-                                        <th>Date</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
+                <br />
+                <div className="common-table">
+                    <div className="scroll-table">
+                        <table className="table">
+                            <thead>
+                                <tr>
+                                    <th>Booking ID</th>
+                                    <th>Name</th>
+                                    <th>Date</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
                             <tbody>
                                 {patients}
                             </tbody>
-                            </table>
-                        </div>
+                        </table>
                     </div>
+                </div>
             </div>
             <br />
         </Fragment>
