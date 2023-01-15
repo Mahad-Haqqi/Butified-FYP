@@ -16,10 +16,7 @@ const Navbar = ({
   const authUserLinks = (
     <Fragment>
       <Link className="nav-logo" to="/appointment">
-        <MovingComponent
-          type="typewriter"
-          dataText={["Career", "Prediction", "and ", "Counselling"]}
-        />
+      Career Counselling
       </Link>
       <button
         className="navbar-toggler"
@@ -66,10 +63,7 @@ const Navbar = ({
   const authDoctorLinks = (
     <Fragment>
       <Link className="nav-logo" to="/dashboard">
-        <MovingComponent
-          type="typewriter"
-          dataText={["Career", "Prediction", "and ", "Counselling"]}
-        />
+        Career Counselling
       </Link>
       <button
         className="navbar-toggler"
@@ -108,33 +102,6 @@ const Navbar = ({
             Add Experience
             </Link>
           </li>
-
-          {/* <li className="nav-item dropdown active">
-            <Link
-              className="nav-link dropdown-toggle"
-              id="navbarDropdownMenuLink"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Update Profile
-            </Link>
-            <div
-              className="dropdown-menu"
-              aria-labelledby="navbarDropdownMenuLink"
-            >
-              <Link className="dropdown-item" to="/edit-Profile">
-                <i className="far fa-id-card"></i> Edit Profile
-              </Link>
-              <Link className="dropdown-item" to="/add-Education">
-                <i className="fas fa-university"></i> Add Education
-              </Link>
-              <Link className="dropdown-item" to="/add-Experience">
-                {" "}
-                <i className="fab fa-black-tie"></i> Add Experience
-              </Link>
-            </div>
-          </li>*/}
           <li className="nav-item active">
             <a
               className="nav-link font-weight-bolder"
@@ -151,10 +118,7 @@ const Navbar = ({
   const guestLinks = (
     <Fragment>
       <Link className="nav-logo" to="/">
-        <MovingComponent
-          type="typewriter"
-          dataText={["Career", "Prediction", "and ", "Counselling"]}
-        />
+      Career Counselling
       </Link>
 
       <button

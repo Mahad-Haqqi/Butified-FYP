@@ -60,8 +60,8 @@ const Patient = ({ patient }) => {
                     aria-describedby="modal-modal-description"
                 >
 
-                    <div className="profiles">
-                        <div className="profile-1">
+                    <div className="profiles" style={style}>
+                        <div className="profile-1" style={{display:"flex", flexDirection:"column"}}>
                             <div className="profile-details">
                                 <div className="appointment-p prfile-desc">
                                     {
