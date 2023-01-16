@@ -16,8 +16,16 @@ export const personality = {
   ],
   ESFJ: [
     "The Provider",
-    "ESFJs are conscientious helpers, sensitive to the needs of others and energetically dedicated to their responsibilities. They are highly attuned to their emotional environment and attentive to both the feelings of others and the perception others have of them.",
-    "This personality type tends to prefer working in groups, especially in roles where they care for the well-being of others. Good careers for those with the ESFJ personality type are social worker, nurse or healthcare worker, sales representative, or in public relations.",
+    "ESFJs are conscientious helpers",
+    "Sensitive to the needs of others",
+    "Energetically dedicated to their responsibilities.",
+    "They are highly attuned to their emotional environment",
+    "Attentive to both the feelings of others and the perception others have of them.",
+    "social worker", 
+    "nurse",
+    "healthcare worker", 
+    "sales representative", 
+    "public relations.",
   ],
   ISTP: [
     "The Craftsperson",
