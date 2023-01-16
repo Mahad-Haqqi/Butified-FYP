@@ -3,4 +3,21 @@
   flex-direction: row;
   padding: 0% 0%;
 }
+.Result{
+  text-align: center;
+  font-size: 30px;
+  padding-top: 0px;
+  padding-bottom: 120px;
+}
+.Container1{
+  display: flex;
+}
+.personality {
+  flex: 1;
+  border: 2px solid white;
+
+}  
+.personality:first-child {
+  margin-right: 20px;
+} 
 

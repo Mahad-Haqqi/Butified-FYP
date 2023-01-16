@@ -45,15 +45,22 @@ const Result = ({ type, first, second, third, fourth }) => {
   return (
     <>
       <div className="result1">
-        <h1>Based On the Performance of Test</h1>
-        <h2>Our Prediction is</h2>
-        <h1>
+        <h1 className="Result">Based On the Performance of Test</h1>
+        <div className="Container1">
+        <div className="personality">
+        <h2><b>Predicted Personality:</b> </h2>
+        <h3>
           {type.type}
           <span>({personality[type.type][0]})</span>
-        </h1>
-        <p>{personality[type.type][1]}</p>
+        </h3>
+        <p className="personality">{personality[type.type][1]}</p>
+        </div>
+        <div className="personality">
+        <h2><b>Career options</b></h2>
         <h2>Career options</h2>
-        <p>{personality[type.type][2]}</p>
+        <p className="personality">{personality[type.type][2]}</p>
+        </div>
+      </div>
       </div>
       <div className="chart">
         <div className="column"><Doughnut data={chartData1} width={250} /></div>
