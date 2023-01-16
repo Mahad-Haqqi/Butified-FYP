@@ -53,18 +53,25 @@ const Result = ({ type, first, second, third, fourth }) => {
           {type.type}
           <span>({personality[type.type][0]})</span>
         </h3>
-        <p className="personality">{personality[type.type][1]}</p>
-        <ul><li>({personality[type.type][2]})</li>
-        <li>({personality[type.type][3]})</li>
-        <li>({personality[type.type][4]})</li>
-        <li>({personality[type.type][5]})</li>
+        <ul>
+        <li>{personality[type.type][1]}</li>
+        <li>{personality[type.type][2]}</li>
+        <li>{personality[type.type][3]}</li>
+        <li>{personality[type.type][4]}</li>
+        <li>{personality[type.type][5]}</li>
         </ul>
         
         </div>
         <div className="personality">
         <h2><b>Career options</b></h2>
         <h2>Career options</h2>
-        <p className="personality">{personality[type.type][2]}</p>
+        <ul>
+        <li>{personality[type.type][6]}</li>
+        <li>{personality[type.type][7]}</li>
+        <li>{personality[type.type][8]}</li>
+        <li>{personality[type.type][9]}</li>
+        <li>{personality[type.type][10]}</li>
+        </ul>
         </div>
       </div>
       </div>
