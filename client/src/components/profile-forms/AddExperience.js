@@ -38,9 +38,7 @@ const AddExperience = ({ addExperience, history }) => {
                     <i className="fab fa-black-tie"></i>
                   </h1>
                   <p className="lead">
-                    <i className="fas fa-user"></i> Add any job or position that
-                    you have had in the past or current
-                  </p>
+                    <i className="fas fa-user"></i> Add any Professional Experience</p>
                 </div>
                 <form
                   onSubmit={(e) => {
@@ -82,7 +80,7 @@ const AddExperience = ({ addExperience, history }) => {
                       required
                     />
                   </div>
-                  <h6>From Date</h6>
+                  <h6>From</h6>
                   <div className="form-group">
                     <input
                       type="date"
@@ -104,10 +102,10 @@ const AddExperience = ({ addExperience, history }) => {
                           toggleDisabled(!toDateDisabled)
                         }}
                       />{" "}
-                      Current Job
+                      Ongoing
                     </p>
                   </div>
-                  <h6>To Date</h6>
+                  <h6>To</h6>
                   <div className="form-group">
                     <input
                       type="date"

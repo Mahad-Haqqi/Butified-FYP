@@ -36,7 +36,7 @@ const AddEducation = ({addEducation, history}) => {
                                         <i className="fas fa-university"></i>
                                     </h1>  
                                     <p className="lead">
-                                        <i className="fas fa-user"></i> Add any school etc that you have attended
+                                        <i className="fas fa-user"></i> Add Education Information
                                     </p>
                                 </div>
                                 <form onSubmit={e => {
@@ -78,7 +78,7 @@ const AddEducation = ({addEducation, history}) => {
                                     />
                                     </div>
                                     
-                                    <h6>From Date</h6>
+                                    <h6>From</h6>
                                     <div className="form-group">
                                         <input type="date" className="form-control" name="from" value={from} onChange={e => onChange(e)} />
                                     </div>
@@ -86,9 +86,9 @@ const AddEducation = ({addEducation, history}) => {
                                         <p><input type="checkbox" name="current" checked={current} value={current} onChange={e => {
                                             setFormdata({ ...formData, current: !current });
                                             toggleDisabled(!toDateDisabled);
-                                        }} /> {' '} Current School</p>
+                                        }} /> {' '} ongoing</p>
                                     </div>
-                                    <h6>To Date</h6>
+                                    <h6>To</h6>
                                     <div className="form-group">
                                         <input 
                                             type="date" 
