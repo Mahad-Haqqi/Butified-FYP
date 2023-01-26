@@ -78,14 +78,17 @@ const Form = ({ profile, doctorId, history, addAppointment }) => {
           />
         </div>
         <div className="form-group">
-          <input
-            type="text"
+          <select
             className="form-control"
-            placeholder="* Slot"
-            name="Slot"
             value={slot}
             onChange={(e) => onChange(e)}
-          />
+          >
+            <option value="1">10 AM--11 AM</option>
+            <option value="2">11 AM--12 AM</option>
+            <option value="3">12 AM--1 PM</option>
+            <option value="3">3 PM--4 PM</option>
+            <option value="3">4 PM--5 PM</option>
+          </select>
         </div>
         <div className="form-group">
           <input
