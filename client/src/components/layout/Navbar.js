@@ -157,7 +157,7 @@ const Navbar = ({
           </li>
           <li className="nav-item active">
             <Link to="/registerDoctor" className="nav-link">
-              Register Counslor
+              Register Counsellor
             </Link>
           </li>
         </ul>

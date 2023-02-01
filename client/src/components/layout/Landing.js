@@ -31,8 +31,7 @@ const Landing = ({ isDoctorAuthenticated, isUserAuthenticated }) => {
                 <strong>For Counsellor's</strong>
               </h2>
               <p className="item description">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel
-                itaque quae delectus veritatis consequatur hic!
+              Are you feeling stuck in your career or unsure about your next steps? Finding fulfilling work can be a challenge, but with the right support, you can gain clarity and direction in your career journey.
               </p>
               <Link
                 to="/registerDoctor"
@@ -47,8 +46,7 @@ const Landing = ({ isDoctorAuthenticated, isUserAuthenticated }) => {
                 <strong>For Users</strong>
               </h2>
               <p className="item description">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel
-                itaque quae delectus veritatis consequatur hic!
+                Book appointments with career counsellor to get insight of your strengths and interests.fill the questionnaire to get your personality predicted and get career suggestions.
               </p>
               <Link
                 to="/registerUser"
